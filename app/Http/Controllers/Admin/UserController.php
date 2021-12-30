@@ -29,7 +29,11 @@ class UserController extends Controller
             dd('no access allowed');
         }
 
-        return view('admin.users.index', ['users' => User::paginate(10)]);
+        if(Gate::allows('is-admin')){
+            return view('admin.users.index', ['users' => User::paginate(10)]);
+        }
+
+        dd('You need to be admin');
     }
 
     /**$users = User::all();
