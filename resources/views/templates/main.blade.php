@@ -28,7 +28,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">User</a>
+                        <a class="nav-link" href="{{ route('admin.users.index') }}">User</a>
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
